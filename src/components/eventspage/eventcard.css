@@ -1,0 +1,109 @@
+.card{
+  background-size: contain;
+  background-repeat: no-repeat ;
+  background-position: center;
+  width: 30%;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  font-weight: bold;
+  text-align: center;
+  filter: brightness(0.8);
+  z-index: 2;
+  margin-bottom: 5%;
+  position: absolute;
+  top: 7em;
+  justify-self: center;
+  cursor: pointer;
+}
+.card:hover{
+  filter: drop-shadow(0 0 5px rgb(255, 219, 40));
+  animation: wiggle 0.5s linear;
+  
+  transition: filter 2s ease-in-out;
+}
+@keyframes wiggle {
+  25% {
+    transform: rotate(-3deg);
+  }
+  50%{
+    transform: rotate(3deg);
+  }
+  75%{
+    transform: rotate(0deg);
+  }
+  
+  
+}
+.background{
+  
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black ;
+  opacity: .5;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  justify-items: center;
+}
+
+.bigcard{
+  opacity: 1;
+  position: fixed;
+  width: fit-content;
+  height: 70%;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 10;
+  bottom: 10%;
+  
+}
+.leftcard{
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: auto;
+  
+}
+.rightcard{
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: auto;
+  
+}
+.middlecard{
+  
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: auto;
+  animation: middle 2s linear;
+}
+
+  
+
+@keyframes middle {
+  0% {
+    width: 20% ;
+  }
+  100%{
+    width: 100%;
+  }
+  
+}
+.button{
+  position: absolute;
+  background-color: red;
+  color: white;
+  top: 2%;
+  right: 2%;
+  z-index: 10;
+}

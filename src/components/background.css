@@ -1,0 +1,31 @@
+.rain-container {
+  position: fixed;
+  top: 0;
+  left: -10%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(to bottom, #030f18, #17182a); /* Stormy gradient */
+  overflow: hidden;
+  z-index: -1;
+}
+
+.raindrop {
+  position: absolute;
+  top: -30px;
+  width: 2px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation-name: fall-diagonal;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fall-diagonal {
+  0% {
+    transform: translate(0, 0) rotate(-20deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(300px, 100vh) rotate(-20deg); 
+  }
+}

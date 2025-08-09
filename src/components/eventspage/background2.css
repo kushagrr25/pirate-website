@@ -1,0 +1,25 @@
+.back{
+  background-size: cover ;
+  width:100%;
+  height:100%;
+  position:fixed;
+  margin: 0cap;
+  z-index: -1;
+  overflow: hidden;
+}
+.compass2{
+  position: fixed;
+  filter: brightness(0.6);
+  top: 20%;
+  right: 10%;
+  height: 30%;
+  width: auto;
+ 
+
+}
+.compass2:hover{
+  filter:brightness(0.7) drop-shadow(0 0 2px yellow);
+  transform: scale(1.1);
+   transition: filter 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+}

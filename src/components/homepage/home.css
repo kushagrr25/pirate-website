@@ -1,0 +1,78 @@
+.timerboard {
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat; 
+  display: flex;
+  position: fixed;
+  width: 40%;
+  height: 50%;
+  bottom: 0%;
+  margin-left: 5%;
+  justify-content: center;
+  transition: filter 0.5s ease-in-out;
+  align-items: center;
+  /* background-color: bisque; */
+}
+.timerboard:hover {
+  filter: drop-shadow(0 0 7px rgb(255, 236, 27));
+}
+.timerboard_inner {
+  font-family: "WolvesFont";
+  font-size: xx-large;
+  position: relative;
+  max-width: max-content;
+  height: 70%;
+  align-items: center;
+
+}
+@font-face {
+  font-family: "WolvesFont";
+  src: url("./Wolves and Ruin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.parrot {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  height: auto;
+  width: 20%;
+  top: -25%;
+  left: 15%;
+  /* background-color: rgb(45, 42, 39); */
+}
+@media (max-width: 1440px) {
+  .parrot{
+    top: -25%;
+  }
+  .timerboard{
+    width: 45%;
+  }
+}
+@media (max-width : 1201px) {
+  .parrot{
+    top: -20%;
+  }
+  
+}
+@media (max-width: 1000px) {
+  .parrot{top:-25% ;}
+  .timerboard_inner{
+    font-size: x-large;
+  }
+  .timerboard{
+    
+    margin-left: 3%;
+    height: 40%;
+
+    
+  }
+}
+@media(max-width: 850px){
+  .parrot{
+    top:-18%
+  }
+}
+
+

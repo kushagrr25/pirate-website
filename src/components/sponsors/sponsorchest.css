@@ -1,0 +1,162 @@
+.chest{
+  position: absolute;
+  top: 55%;
+  left: 39%;
+  height: fit-content;
+  width: 20%;
+  /* background-color: #fff; */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  
+}
+.chestbottom{
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-color: rgb(0, 0, 0); */
+  width: 100% ;
+  height: auto;
+  top: 0;
+  transition: transform 1s ease-in;
+
+}
+
+.coin{
+  
+  z-index: -1;
+  position: absolute;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 70%;
+  width: auto ;
+  filter: drop-shadow(0 -5px 5px rgb(255, 246, 67));
+  top: 15%;
+  left: 26%;
+  transition: transform 1s  ease-in;
+  transform-style: preserve-3d;
+}
+
+.chesttop{
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100% ;
+  height: auto;
+  /* background-color: blue; */
+  transition: transform 1s ease-in-out;
+}
+.chest:hover{
+  
+  .chesttop{
+    transform: translateY(-50%);
+    /* transition: transform 1s ease-in; */
+    
+  }
+  .chestbottom{
+    transform: rotateX(0);
+   
+  }
+  .coin{
+    transform: rotateY(720deg) scale(1.2) translateY(-10%);
+    animation: raiseZ 1s forwards;
+    
+  }
+  /* .chesttop,.chestbottom{
+    filter: drop-shadow(0 0 5px rgb(255, 214, 31));
+    transition: filter 1s ease-in;
+  } */
+}
+@keyframes raiseZ {
+  0% {
+    
+   opacity: .1; 
+  }
+  75%{
+    opacity: .5;
+    
+  }
+  100% {
+    z-index: 10;
+    opacity: 1;
+  }}
+
+.island{
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.lefttrees{
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: auto;
+  top: 0;
+  left: 0;
+}
+.righttrees{
+  height: 50%;
+  width: auto;
+  position: absolute;
+  right:0;
+  top:0;
+}
+
+.chestbox{
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  justify-self: center;
+  /* background-color: black; */
+}
+
+.glow{
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  /* filter: drop-shadow(10px 10px 10px rgb(255, 197, 61)); */
+  /* background-color: blue; */
+  width: 200%;
+  height: 40%;
+  left: -40%;
+  bottom: 15%;
+  animation: glowing 2s linear;
+  border-radius: 50%;
+}
+
+.chest1{
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: auto;
+  width: 100%;
+  bottom: 0%;
+  /* background-color: bisque; */
+  transition: filter 0.5s ease-in-out;
+}
+.chest1:hover{
+  filter: drop-shadow(0 0 15px rgb(245, 255, 47));
+
+}
+
+
+@keyframes glowing {
+  0% { 
+    
+    opacity: 0%;
+   }
+  100%{
+    
+    opacity: 100%;
+  }
+}
+button1{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+

@@ -1,0 +1,133 @@
+#navblock{
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  width: 100%;
+  height: 8%;
+  justify-content: space-between;
+  align-items: center;
+}
+#navlogo{
+  position: relative;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: auto;
+  height: 85%;
+  transition: filter 0.3s ease-in;
+  left: 2%;
+  /* background-color: aliceblue; */
+}
+#navlogo:hover{
+  filter:drop-shadow(0 0 5px cyan);
+}
+.Navlinks{
+  text-emphasis: none;
+  text-decoration: none;
+}
+.navlinks{
+  position: relative;
+  /* background-color: aliceblue; */
+  text-decoration: none;
+  width: 50%;
+  height: 100%;
+  /* color: rgb(255, 255, 255); */
+  font-size: 180%;
+  list-style: none;
+  font-family: 'WolvesFont';
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+@font-face {
+  font-family: 'WolvesFont';
+  src: url('./fonts/Wolves and Ruin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+#rope{
+  background-size: contain;
+  background-repeat: repeat-x ;
+  width: 100%;
+  height: 1.4%;
+  position: fixed ;
+  top: 8%;
+  z-index: 3;
+  
+}
+.anchor{
+  
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: fixed;
+  height: 25%;
+  width: auto;
+  top: 8%;
+  left: 2%;
+  transform-origin: top center;
+  z-index: 2;
+  animation: anchor 3s infinite linear;
+  transition: filter 0.5s ease-in-out;
+}
+
+@keyframes anchor {
+  25% {
+    transform: rotate(10deg);
+  }
+
+  75%{
+    transform: rotate(-10deg);
+  }
+  
+}
+.anchor:hover{
+   filter: drop-shadow(0 0 5px cyan);
+}
+.compass{
+  background-position:center ;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 90%;
+  width: auto;
+  background-size: contain;
+  left: -10%;
+  transition: transform 1s ease-in;
+  /* background-color: aliceblue; */
+}
+.compass:hover{
+  transform: rotate(720deg) scale(1.5);
+}
+.active-link {
+  color: cyan;
+}
+.navlink{
+  text-decoration: none;
+  color: aliceblue;
+  transition: filter .2s ease-in-out;
+}
+.navlink:hover{
+  filter: drop-shadow(0 0 5px cyan);
+}
+
+@media (max-width:1200px) {
+  .compass{
+    left: -8%;
+  }
+  .navlinks{
+    font-size: 1.6rem;
+  }
+  
+}
+@media (max-width:1000px) {
+  .compass{
+    left: 5%;
+  }
+  .navlinks{
+    font-size: 1.3rem;
+  }
+  
+}
+
